@@ -1,0 +1,13 @@
+#!/usr/bin/env ruby
+
+files = ARGV.sort().join(' ');
+
+cmd = "file #{files} | grep 'text' | grep -v HTML";
+fileType = `#{cmd}`;
+
+
+if(fileType == "")
+	`qlmanage -p #{files} 2> /dev/null`;
+else
+	`qlmanage -p -c public.plain-text #{files} 2> /dev/null`;
+end

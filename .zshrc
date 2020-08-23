@@ -140,20 +140,22 @@ POWERLEVEL9K_DIR_PATH_HIGHLIGHT_BOLD=false
 #POWERLEVEL9K_BATTERY_STAGES="        "
 ##POWERLEVEL9K_BATTERY_STAGES="▁▂▃▄▅▆▇█"
 #POWERLEVEL9K_BATTERY_VERBOSE=false
-export PATH=/Users/soneil/local/bin/:$PATH
+export PATH=$HOME/local/bin/:$PATH
 export PATH=$HOME/.krew/bin:$PATH
-export PATH=/Users/soneil/Library/Python/3.8/bin:$PATH
+export PATH=$HOME/Library/Python/3.8/bin:$PATH
 
 alias avery="ssh -p 732 oneils@avery.actf.oregonstate.edu"
 alias actf="ssh -p 732 oneilst@shell.actf.oregonstate.edu"
 alias cgrb="ssh -p 732 oneils@shell.cgrb.oregonstate.edu"
 
 
-eval "$(direnv hook zsh)"
+eval "$(direnv hook zsh || true)"
 
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh" || true
 
-export PATH=/Users/soneil/local/bin/utils/k8s:$PATH
+export PATH=$HOME/local/bin/utils/k8s:$PATH
+export PATH=$HOME/local/bin/utils/osxutils:$PATH
+export PATH=$HOME/local/bin/utils/rscripts:$PATH
 
 #alias k='$(if [ "$NS" != "" ]; then echo "kubectl -n $NS " ; else echo "kubectl " ; fi)'
 complete -F __start_kubectl k

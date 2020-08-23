@@ -1,0 +1,80 @@
+#!/usr/bin/env Rscript
+library(ggplot2)
+
+
+## Shawn O'Neil, May 2014. All rights reserved,
+## the author and/or any institutions the author may or may 
+## not be affiliated assume no responsibility for the
+## use or misuse of this program, intentional or 
+## unintentional, epistemic or otherwise.
+
+############################
+## Default params...
+############################
+
+filename = "stdin"
+cmd <- ""
+use_header <- F
+
+############################
+## Read command-line args
+############################
+
+args <- commandArgs(trailingOnly = T)
+
+############################
+## Parse command-line args
+############################
+
+if(length(args) == 3) {
+	filename <- args[1]
+	if(filename == "-") {
+		filename <- "stdin"
+	}
+	cmd <- paste("p <- ggplot(dd) + ", args[2])
+	use_header <- as.logical(args[3])
+} else if(length(args == 2)) {
+	filename <- args[1]
+	if(filename == "-") {
+		filename <- "stdin"
+	}
+	cmd <- paste("p <- ggplot(dd) + ", args[2])
+} else {
+	cat("Usage: ggplotcmd file.txt 'stat_bin(aes(x = V1)) + scale_x_continuous(limits = c(0,100))' F\n")
+	cat("or:\n")
+	cat("Usage: cat data.txt | ggplotcmd - 'stat_bin(aes(x = V1)) + scale_x_continuous(limits = c(0,100))' F\n")
+	cat("If your data has header names:\n")
+	cat("Usage: cat data.txt | ggplotcmd - 'stat_bin(aes(x = colname)) + scale_x_continuous(limits = c(0,100))' T\n")
+	quit()
+}
+
+############################
+## Read data on stdin, create the plot object
+############################
+
+dd <- read.table(filename, header = use_header, stringsAsFactors = F)
+exp <- parse(text = cmd)
+eval(exp)
+
+
+############################
+## Save it to disk
+############################
+
+datestamp <- format(Sys.time(), "%a-%b-%d-%X-%Y")
+tempname <- paste("/tmp/", datestamp, ".pdf", sep = "")
+ggsave(tempname, p)
+
+
+############################
+## Display it and remove it.
+## qlmanage is an osx-command,
+## modify as necessary for your setup ;)
+############################
+
+displaycmd <- paste("qlmanage -p ", tempname, sep = "")
+#displaycmd <- paste("open -W ", tempname, sep = "")
+rmcmd <- paste("rm ", tempname, sep = "")
+
+system(displaycmd, wait = T)
+system(rmcmd, wait = T)
