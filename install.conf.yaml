@@ -6,14 +6,14 @@
 - clean: ['~']
 
 - link:
-    ~/.tmux/:
-    ~/.tmux.conf:
-    ~/.tmux.conf.local: 
+    ~/.tmux: .tmux
+    ~/.tmux.conf: .tmux.conf
+    ~/.tmux.conf.local: .tmux.conf.local
 
-    ~/.vim:
-    ~/.vimrc:
+    ~/.vim: .vim
+    ~/.vimrc: .vimrc
 
-    ~/.zshrc:
+    ~/.zshrc: .zshrc
 
 
 - create:
