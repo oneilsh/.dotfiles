@@ -15,7 +15,8 @@
     ~/.vimrc:
 
     ~/.zshrc:
-    ~/.oh-my-zsh: 
+    ~/.oh-my-zsh:
+    ~/.powerlevel10k:  
 
 - create:
     - ~/Downloads
