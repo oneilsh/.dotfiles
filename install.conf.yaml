@@ -8,15 +8,15 @@
 
 - link:
     ~/local/bin/utils: utils
-    ~/.tmux: .tmux
-    ~/.tmux.conf: .tmux.conf
-    ~/.tmux.conf.local: .tmux.conf.local
+    ~/.tmux: tmux
+    ~/.tmux.conf:    # defaults to basename without the leading . 
+    ~/.tmux.conf.local: 
 
-    ~/.vim: .vim
-    ~/.vimrc: .vimrc
+    ~/.vim:
+    ~/.vimrc:
 
-    ~/.zshrc: .zshrc
-
+    ~/.zshrc:
+    ~/.oh-my-zsh: 
 
 - create:
     - ~/Downloads
