@@ -2,6 +2,7 @@
     link:
       relink: true   # Removes the old target if it's a symlink
       create: true   # create parent directories to the link as needed.
+      force: true    # Force removes the old target, file or folder, and forces a new link
 
 - clean: ['~']
 
