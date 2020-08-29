@@ -1,8 +1,2 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =6
-let g:netrw_dirhist_1='/Users/soneil/Documents/projects/infrastructure/kubernetes/ClusterSecret/yaml/Object_example'
-let g:netrw_dirhist_2='/Users/soneil/Documents/projects/infrastructure/kubernetes/ClusterSecret/src'
-let g:netrw_dirhist_3='/Users/soneil/Documents/projects/infrastructure/kubernetes/dsosuk8s/charts/docker-registry/kush'
-let g:netrw_dirhist_4='/Users/soneil/.tmux'
-let g:netrw_dirhist_5='/Users/soneil/Documents/projects/infrastructure/kubernetes/dsosuk8s/docker_images/jupyterlab-nvidia-scipy'
-let g:netrw_dirhist_6='/Users/soneil/Documents/projects/infrastructure/kubernetes/dsosuk8s/docker_images/jupyterlab-ubuntu-nvidia-scipy'
+let g:netrw_dirhist_cnt =8

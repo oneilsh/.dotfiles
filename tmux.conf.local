@@ -313,4 +313,5 @@ set -g status-interval 1     # redraw status line every 1 seconds
 # move status line to top
 #set -g status-position top
 
-
+# use zsh
+set-option -g default-shell /bin/zsh
