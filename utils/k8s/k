@@ -1,3 +1,0 @@
-#!/bin/bash
-namespace=$(set -o pipefail && tmux showenv NS | sed 's/^NS=//' || echo default)
-kubectl -n $namespace ${@}

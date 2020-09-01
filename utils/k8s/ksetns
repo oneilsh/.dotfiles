@@ -1,2 +1,0 @@
-
-tmux setenv NS $1
