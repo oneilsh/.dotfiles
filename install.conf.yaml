@@ -3,6 +3,9 @@
       relink: true   # Removes the old target if it's a symlink
       create: true   # create parent directories to the link as needed.
       force: true    # Force removes the old target, file or folder, and forces a new link
+    shell: 
+      stdout: true
+      stderr: true
 
 - clean: ['~']
 
@@ -25,10 +28,10 @@
     - ~/.vim/undo-history
 
 - shell:
-  - command: chsh -s $(which zsh)
+  - command: chsh -s $(which zsh) || echo "Whoops, couldn't change to zsh default."
     description: Make zsh default shell
-  - command: if [ "$USER" == "root" ]; then (sed -r -i '/^.*PermitRootLogin.*$/d' /etc/ssh/sshd_config || true) && echo "PermitRootLogin prohibit-password" >> /etc/ssh/sshd_config; fi
+  - command: bash -c 'if [ "$USER" == "root" ]; then (sed -r -i "/^.*PermitRootLogin.*$/d" /etc/ssh/sshd_config || true) && echo "PermitRootLogin prohibit-password" >> /etc/ssh/sshd_config; fi'
     description: Allow key-based login for root
-  - command: if [ "$USER" == "root" ]; then systemctl restart sshd; fi
+  - command: bash -c 'if [ "$USER" == "root" ]; then systemctl restart sshd; fi'
     description: Restart ssh
 
