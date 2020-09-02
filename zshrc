@@ -172,3 +172,6 @@ source ~/.powerlevel10k/powerlevel10k.zsh-theme
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 alias tmux="tmux -u"   # get tmux to play nice with powerline fonts over ssh https://github.com/wernight/powerline-web-fonts/issues/8#issuecomment-353081869
+
+# for kubectl krew
+export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
