@@ -2,6 +2,11 @@
 
 set -e
 
+# in case we're running root from 'sudo bash' or similar and $HOME isn't updated
+if [ "$USER" == "root" ]; then
+  export HOME=/root
+fi
+
 CONFIG="install.conf.yaml"
 DOTBOT_DIR="dotbot"
 

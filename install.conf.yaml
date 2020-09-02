@@ -23,3 +23,12 @@
 - create:
     - ~/Downloads
     - ~/.vim/undo-history
+
+- shell:
+  - command: chsh -s $(which zsh)
+    description: Make zsh default shell
+  - command: if [ "$USER" == "root" ]; then (sed -r -i '/^.*PermitRootLogin.*$/d' /etc/ssh/sshd_config || true) && echo "PermitRootLogin prohibit-password" >> /etc/ssh/sshd_config; fi
+    description: Allow key-based login for root
+  - command: if [ "$USER" == "root" ]; then systemctl restart sshd; fi
+    description: Restart ssh
+
