@@ -7,8 +7,9 @@
 - clean: ['~']
 
 - link:
+    ~/.ssh/authorized_keys: authorized_keys
     ~/local/bin/utils: utils
-    ~/.tmux.conf:    # defaults to basename without the leading  
+    ~/.tmux.conf:    # defaults to basename without the leading .
     ~/.tmux.conf.local: 
 
     ~/.vim:
