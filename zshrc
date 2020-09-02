@@ -164,7 +164,7 @@ export PATH=$HOME/local/bin/utils/k8s:$PATH
 export PATH=$HOME/local/bin/utils/osxutils:$PATH
 export PATH=$HOME/local/bin/utils/rscripts:$PATH
 
-#alias k='$(if [ "$NS" != "" ]; then echo "kubectl -n $NS " ; else echo "kubectl " ; fi)'
+alias k=kubectl
 complete -F __start_kubectl k
 source ~/.powerlevel10k/powerlevel10k.zsh-theme
 
