@@ -194,7 +194,7 @@ tmux_conf_theme_right_separator_sub='\uE0B3'  #   PowerlineSymbols.otf font, see
 #     - #{username}
 #     - #{username_ssh}
 #tmux_conf_theme_status_left=' ❐ #S | ↑#{?uptime_y, #{uptime_y}y,}#{?uptime_d, #{uptime_d}d,}#{?uptime_h, #{uptime_h}h,}#{?uptime_m, #{uptime_m}m,} '
-tmux_conf_theme_status_left="#(echo k8s:$(kubectl config current-context || echo -))/#(set -o pipefail && tmux showenv NS | sed 's/^NS=//' || echo default) | #(echo git:$(git rev-parse --abbrev-ref HEAD || echo noGit)' ')"
+tmux_conf_theme_status_left="#(echo k8s:$(kubectl config current-context || echo -))/#(kubectl ns -c) | #(echo git:$(git rev-parse --abbrev-ref HEAD || echo noGit)' ')"
 #tmux_conf_theme_status_right='#{prefix} #{?battery_status, #{battery_status},}#{?battery_percentage, #{battery_percentage},} | %r | %b %d #{hostname} '
 tmux_conf_theme_status_right='#{prefix} #{?battery_status, #{battery_status},}#{?battery_percentage, #{battery_percentage},} | %r | %b %d'
 

@@ -11,11 +11,11 @@ execute pathogen#infect()
 syntax on
 
 filetype plugin indent on
-au FileType yaml setl shiftwidth=2 tabstop=2 expandtab
+au FileType js,yaml,json setl shiftwidth=2 tabstop=2 expandtab
 au FileType python setl shiftwidth=4 tabstop=4 expandtab
 set hidden    " allow switching buffers without saving
 set nowrap
-
+set paste
 
 " needed to get colors & fonts working " (install powerline fonts locally!) 
 set lazyredraw 
