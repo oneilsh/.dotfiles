@@ -9,13 +9,15 @@ inoremap <C-p> <Esc><Esc>:bprev<cr>
 
 execute pathogen#infect()
 syntax on
+"set listchars=space:_,tab:>~ list
 
 filetype plugin indent on
-au FileType js,yaml,json setl shiftwidth=2 tabstop=2 expandtab
+au FileType javascript,yaml,json setl shiftwidth=2 tabstop=2 expandtab
 au FileType python setl shiftwidth=4 tabstop=4 expandtab
 set hidden    " allow switching buffers without saving
 set nowrap
 set paste
+set expandtab
 
 " needed to get colors & fonts working " (install powerline fonts locally!) 
 set lazyredraw 
