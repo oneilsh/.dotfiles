@@ -175,3 +175,5 @@ alias tmux="tmux -u"   # get tmux to play nice with powerline fonts over ssh htt
 
 # for kubectl krew
 export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
+
+export LSCOLORS="exfxcxdxbxegedabagacad"

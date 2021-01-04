@@ -18,6 +18,7 @@ set hidden    " allow switching buffers without saving
 set nowrap
 set paste
 set expandtab
+set backspace=indent,eol,start
 
 " needed to get colors & fonts working " (install powerline fonts locally!) 
 set lazyredraw 
