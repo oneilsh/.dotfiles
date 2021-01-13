@@ -177,3 +177,6 @@ alias tmux="tmux -u"   # get tmux to play nice with powerline fonts over ssh htt
 export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
 
 export LSCOLORS="exfxcxdxbxegedabagacad"
+
+# gitpush - for quick edits without commits & messages
+alias gitpush='git add -A && git commit --amend --no-edit && git push --force'
