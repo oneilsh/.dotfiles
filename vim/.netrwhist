@@ -1,3 +1,6 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =1
-let g:netrw_dirhist_1='/Users/soneil/.dotfiles/vim'
+let g:netrw_dirhistcnt =4
+let g:netrw_dirhist_4='/Users/oneils/Downloads/dust/front/pages/api/apps/[user]'
+let g:netrw_dirhist_3='/Users/oneils/Documents/projects/tislab/n3c/lda_figures/parse_notebooks/tests/project1/workbook2'
+let g:netrw_dirhist_2='/Users/oneils/Documents/projects/tislab/n3c/lda_figures/parse_notebooks/project1_files'
+let g:netrw_dirhist_1='/Users/oneils/Documents/projects/tislab/n3c/lda_figures/parse_notebooks/tests/project1/workbook2'
