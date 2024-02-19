@@ -34,4 +34,9 @@
     description: Allow key-based login for root
   - command: bash -c 'if [ "$USER" == "root" ]; then systemctl restart sshd; fi'
     description: Restart ssh
-
+  - command: git config --global user.name "Shawn O'Neil"
+    description: Set git user name
+  - command: git config --global user.email "shawn@tislab.org"
+    description: Set git user email
+  - command: git config --global credential.helper store
+    description: Set git to store creds
