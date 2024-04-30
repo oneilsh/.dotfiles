@@ -12,6 +12,7 @@
 - link:
     ~/.ssh/authorized_keys: authorized_keys
     ~/local/bin/utils: utils
+    ~/local/lib/iterm2_pref: iterm2_pref
     ~/.tmux.conf:    # defaults to basename without the leading .
     ~/.tmux.conf.local: 
 
