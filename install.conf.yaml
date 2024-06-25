@@ -31,10 +31,10 @@
 - shell:
   - command: bash -c 'chsh -s $(which zsh) $USER || echo "Whoops, could not change to zsh default. Try chsh -s $(which zsh) manually."'
     description: Make zsh default shell
-  - command: bash -c 'if [ "$USER" == "root" ]; then (sed -r -i "/^.*PermitRootLogin.*$/d" /etc/ssh/sshd_config || true) && echo "PermitRootLogin prohibit-password" >> /etc/ssh/sshd_config; fi'
-    description: Allow key-based login for root
-  - command: bash -c 'if [ "$USER" == "root" ]; then systemctl restart sshd; fi'
-    description: Restart ssh
+#  - command: bash -c 'if [ "$USER" == "root" ]; then (sed -r -i "/^.*PermitRootLogin.*$/d" /etc/ssh/sshd_config || true) && echo "PermitRootLogin prohibit-password" >> /etc/ssh/sshd_config; fi'
+#    description: Allow key-based login for root
+#  - command: bash -c 'if [ "$USER" == "root" ]; then systemctl restart sshd; fi'
+#    description: Restart ssh
   - command: git config --global user.name "Shawn O'Neil"
     description: Set git user name
   - command: git config --global user.email "shawn@tislab.org"
