@@ -1,3 +1,11 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =1
+let g:netrw_dirhist_cnt =9
 let g:netrw_dirhist_1='/Users/soneil/.dotfiles/vim'
+let g:netrw_dirhist_2='/datascience/dsosuk8s/docker_images'
+let g:netrw_dirhist_3='/datascience/dsosuk8s/charts/ds-jupyterlab'
+let g:netrw_dirhist_4='/datascience/dsosuk8s/docker_images/jupyterlab-k8s-hub'
+let g:netrw_dirhist_5='/datascience/dsosuk8s/charts/ds-jupyterlab/kush'
+let g:netrw_dirhist_6='/datascience/dsosuk8s/charts/nginx-ingress/charts/kubernetes-ingress/templates'
+let g:netrw_dirhist_7='/datascience/dsosuk8s/charts/nginx-ingress/templates'
+let g:netrw_dirhist_8='/datascience/dsosuk8s/charts/nfs-drive/kush'
+let g:netrw_dirhist_9='/datascience/dsosuk8s/charts/nfs-drive/templates'

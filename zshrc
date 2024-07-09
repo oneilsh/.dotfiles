@@ -181,3 +181,5 @@ export LSCOLORS="exfxcxdxbxegedabagacad"
 
 # gitpush - for quick edits without commits & messages
 alias gitpush='git add -A && git commit --amend --no-edit && git push --force'
+export PATH="/datascience/local/bin:$PATH"
+export KUBECONFIG=/datascience/keys/kube/config

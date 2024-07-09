@@ -1,0 +1,18 @@
+#!/bin/bash
+
+# Regular expression pattern for label filtering
+regex_pattern=${1:-".*"} # Default to ".*" which matches everything
+
+# Get all nodes in JSON format
+nodes_json=$(kubectl get nodes -o json)
+
+# Filter nodes based on the regex pattern applied to labels
+matching_nodes=$(echo "$nodes_json" | jq -r --arg pattern "$regex_pattern" '.items[] | select(.metadata.labels | to_entries | any(.key | test($pattern))) | .metadata.name')
+
+# For each node, get the pods running on it
+for node in $matching_nodes; do
+    echo ""
+    echo "Pods on node $node:"
+    kubectl get pods --all-namespaces -o=jsonpath='{range .items[?(@.spec.nodeName=="'$node'")]}{.metadata.name}{"\t"}{.metadata.namespace}{"\n"}{end}' --field-selector=status.phase=Running
+done
+
