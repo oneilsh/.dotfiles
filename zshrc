@@ -184,3 +184,4 @@ alias gitpush='git add -A && git commit --amend --no-edit && git push --force'
 alias reflog='f() { git pull --rebase && dc stop $@ && dc build $@ && dc up -d $@ && dc logs -f $@ };f'
 alias dc='sudo -E /usr/local/bin/docker-compose'
 
+alias dsosu="ssh -i ~/.ssh/aws_controller_shell oneils@shell.onid.oregonstate.edu"
