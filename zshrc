@@ -189,4 +189,5 @@ alias reflog='f() { git pull --rebase && dc stop $@ && dc build $@ && dc up -d $
 alias dc='sudo -E /usr/local/bin/docker-compose'
 
 alias dsosu-onid="ssh -i ~/.ssh/aws_controller_shell oneils@shell.onid.oregonstate.edu"
-alias doosu-dev="ssh -i ~/.ssh/aws_controller_shell oneils@dev-controller.datasci.oregonstate.edu"
+alias dsosu-dev="ssh -i ~/.ssh/aws_controller_shell oneils@dev-controller.datasci.oregonstate.edu"
+alias dsosu-prod="ssh -i ~/.ssh/aws_controller_shell oneils@controller.datasci.oregonstate.edu"
