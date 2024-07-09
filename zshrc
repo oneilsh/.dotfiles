@@ -181,5 +181,12 @@ export LSCOLORS="exfxcxdxbxegedabagacad"
 
 # gitpush - for quick edits without commits & messages
 alias gitpush='git add -A && git commit --amend --no-edit && git push --force'
+
 export PATH="/datascience/local/bin:$PATH"
 export KUBECONFIG=/datascience/keys/kube/config
+
+alias reflog='f() { git pull --rebase && dc stop $@ && dc build $@ && dc up -d $@ && dc logs -f $@ };f'
+alias dc='sudo -E /usr/local/bin/docker-compose'
+
+alias dsosu-onid="ssh -i ~/.ssh/aws_controller_shell oneils@shell.onid.oregonstate.edu"
+alias doosu-dev="ssh -i ~/.ssh/aws_controller_shell oneils@dev-controller.datasci.oregonstate.edu"

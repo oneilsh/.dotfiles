@@ -1,4 +1,5 @@
 let g:netrw_dirhistmax  =10
+<<<<<<< HEAD
 let g:netrw_dirhist_cnt =9
 let g:netrw_dirhist_1='/Users/soneil/.dotfiles/vim'
 let g:netrw_dirhist_2='/datascience/dsosuk8s/docker_images'
@@ -9,3 +10,10 @@ let g:netrw_dirhist_6='/datascience/dsosuk8s/charts/nginx-ingress/charts/kuberne
 let g:netrw_dirhist_7='/datascience/dsosuk8s/charts/nginx-ingress/templates'
 let g:netrw_dirhist_8='/datascience/dsosuk8s/charts/nfs-drive/kush'
 let g:netrw_dirhist_9='/datascience/dsosuk8s/charts/nfs-drive/templates'
+=======
+let g:netrw_dirhistcnt =4
+let g:netrw_dirhist_4='/Users/oneils/Downloads/dust/front/pages/api/apps/[user]'
+let g:netrw_dirhist_3='/Users/oneils/Documents/projects/tislab/n3c/lda_figures/parse_notebooks/tests/project1/workbook2'
+let g:netrw_dirhist_2='/Users/oneils/Documents/projects/tislab/n3c/lda_figures/parse_notebooks/project1_files'
+let g:netrw_dirhist_1='/Users/oneils/Documents/projects/tislab/n3c/lda_figures/parse_notebooks/tests/project1/workbook2'
+>>>>>>> 144356b60f7699cb487a4627cce37d708f3ade57

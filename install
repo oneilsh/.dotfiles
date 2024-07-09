@@ -7,6 +7,15 @@ if [ "$USER" == "root" ]; then
   export HOME=/root
 fi
 
+# Check if running in Google Colab environment
+if [ ! -z "$COLAB_JUPYTER_IP" ]; then
+    if ! command -v zsh &> /dev/null; then
+        echo "zsh is not installed. Installing zsh..."
+        sudo apt update && sudo apt install zsh -y
+    fi
+fi
+
+
 CONFIG="install.conf.yaml"
 DOTBOT_DIR="dotbot"
 
