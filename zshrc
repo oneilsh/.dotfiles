@@ -191,3 +191,38 @@ alias dc='sudo -E /usr/local/bin/docker-compose'
 alias dsosu-onid="ssh -i ~/.ssh/aws_controller_shell oneils@shell.onid.oregonstate.edu"
 alias dsosu-dev="ssh -i ~/.ssh/aws_controller_shell oneils@dev-controller.datasci.oregonstate.edu"
 alias dsosu-prod="ssh -i ~/.ssh/aws_controller_shell oneils@controller.datasci.oregonstate.edu"
+
+# Created by `pipx` on 2025-01-30 13:27:18
+export PATH="$PATH:/Users/oneilsh/.local/bin"
+
+# homebrew gnu utils
+export PATH="/opt/homebrew/opt/make/libexec/gnubin:$PATH"
+
+# homebrew java
+export PATH="/opt/homebrew/opt/openjdk/bin:$PATH"
+
+# pyenv
+export PYENV_ROOT="$HOME/.pyenv"
+[[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init - zsh)"
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/opt/homebrew/Caskroom/miniconda/base/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/opt/homebrew/Caskroom/miniconda/base/etc/profile.d/conda.sh" ]; then
+        . "/opt/homebrew/Caskroom/miniconda/base/etc/profile.d/conda.sh"
+    else
+        export PATH="/opt/homebrew/Caskroom/miniconda/base/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda initialize <<<
+
+
+# Added by LM Studio CLI (lms)
+export PATH="$PATH:/Users/oneilsh/.lmstudio/bin"
+# End of LM Studio CLI section
+
